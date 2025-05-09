@@ -1,0 +1,126 @@
+.section {
+    padding: 4rem 2rem;
+    background-color: #000000;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid {
+    display: flex;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imageColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.imageWrapper {
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 0rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.imageWrapper:hover {
+    transform: scale(1.01);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0rem;
+}
+
+.cards {
+    flex: 1;
+    position: sticky;
+    top: 8rem;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    background: #000000;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.card {
+    padding-bottom: 0.8rem;
+}
+
+.eyebrow {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #ffffff;
+    /* Red sporty accent */
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    margin: 0 0 1rem;
+    font-size: 1.rem;
+    font-weight: 700;
+    color: #e6e0e0de;
+}
+
+p {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.button {
+    display: inline-block;
+    background: #111;
+    /* Dark base */
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.7rem 1.4rem;
+    border-radius: 0.4rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #FFD700;
+}
+
+.divider {
+    height: 1px;
+    background: #ddd;
+    margin: 1.2rem 0;
+}
+
+.noHover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.card:last-child .divider {
+    display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .grid {
+        flex-direction: column;
+    }
+
+    .imageWrapper {
+        height: 60vh;
+    }
+
+    .cards {
+        position: static;
+        max-height: none;
+        padding: 1.5rem;
+    }
+}
