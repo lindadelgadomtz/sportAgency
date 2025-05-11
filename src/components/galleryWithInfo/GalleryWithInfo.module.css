@@ -1,5 +1,5 @@
 .section {
-    padding: 4rem 2rem;
+    padding: 4rem 0rem;
     background-color: #000000;
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -7,8 +7,7 @@
 .grid {
     display: flex;
     gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 90%;
 }
 
 .imageColumn {
@@ -20,14 +19,50 @@
 
 .imageWrapper {
     height: 100vh;
+    position: relative;
     overflow: hidden;
-    border-radius: 0rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageWrapper::before {
+    content: '';
+    position: absolute;
+    top: -2%;
+    left: -2%;
+    right: -2%;
+    bottom: -2%;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.imageWrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 10%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.4), transparent);
+    filter: blur(4px);
+    z-index: 2;
+    pointer-events: none;
 }
 
 .imageWrapper:hover {
-    transform: scale(1.01);
+    transform: scale(1.04);
+    z-index: 2;
+}
+
+.imageWrapper:hover::before {
+    opacity: 0.4;
 }
 
 .image {
@@ -35,6 +70,9 @@
     height: 100%;
     object-fit: cover;
     border-radius: 0rem;
+    display: block;
+    position: relative;
+    z-index: 1;
 }
 
 .cards {
@@ -51,23 +89,32 @@
 
 .card {
     padding-bottom: 0.8rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.card.inView {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .eyebrow {
     font-size: 0.85rem;
     font-weight: bold;
-    color: #ffffff;
-    /* Red sporty accent */
+    color: #999999;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 h4 {
     margin: 0 0 1rem;
-    font-size: 1.rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: #e6e0e0de;
+    color: #FFCC00;
+    text-shadow: 1px 1px 3px rgba(255, 215, 0, 0.3);
 }
 
 p {
@@ -75,12 +122,12 @@ p {
     color: #ffffff;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .button {
     display: inline-block;
     background: #111;
-    /* Dark base */
     color: #000000;
     text-decoration: none;
     font-weight: 600;

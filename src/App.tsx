@@ -21,9 +21,7 @@ const logos = [
 function App() {
   const galleryImages = [
     "/images/cpsOne.webp",
-    "/images/cpsTwo.webp",
     "/images/cpsThree.webp",
-    "/images/cpsFour.webp"
   ];
 
   const contentItems = [
@@ -62,7 +60,7 @@ function App() {
         imageGap="0"
         cardBackgroundColor="#000000"
         buttonColor="#FFD700"
-        hoverEffect={false}
+        hoverEffect={true}
       />
     </div>
   );
