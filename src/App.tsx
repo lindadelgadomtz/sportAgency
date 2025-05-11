@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import { GalleryWithInfo } from './components/galleryWithInfo/GalleryWithInfo';
-import Header from './components/header/Header';
 import HeroSection from './components/heroSection/HeroSection';
 import LogoCarousel from './components/logoCarousel/LogoCarousel';
+import HeaderBurger from './components/headerBurger/HeaderBurger';
 
 const logos = [
   '/logos/andros.png',
@@ -52,6 +52,16 @@ function App() {
 
   return (
     <div className="App">
+      <HeaderBurger
+        links={[
+          { label: 'Présentation', href: '#presentation' },
+          { label: 'Nos sportifs', href: '#sportifs' },
+          { label: 'Nos influenceurs', href: '#influenceurs' },
+          { label: 'Nos collabs', href: '#collabs' },
+          { label: 'Nous contacter', href: '#contact' },
+        ]}
+        languages={['fr', 'en']}
+      />
       <HeroSection  bgImage='./images/heroSection.webp'/>
       <LogoCarousel logos={logos} speed={65} height="100%" />
       <GalleryWithInfo
@@ -62,6 +72,13 @@ function App() {
         buttonColor="#FFD700"
         hoverEffect={true}
       />
+       <main>
+        <section id="presentation">...</section>
+        <section id="sportifs">...</section>
+        <section id="influenceurs">...</section>
+        <section id="collabs">...</section>
+        <section id="contact">...</section>
+      </main>
     </div>
   );
 }
