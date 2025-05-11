@@ -1,0 +1,106 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0.6) 55%,
+    rgba(0, 0, 0, 0.90) 70%,
+    #000000 100%
+  );
+  display: flex;
+  align-items: flex-end; /* 👈 Push content to bottom */
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin-bottom: 5vh; /* 👈 Adjust spacing from bottom */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.hero-title {
+  font-family: 'Rubik Dirt','Poppins','Playfair Display', serif;
+  font-size: 4rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.7); /* 👈 Adds readability */
+}
+
+.hero-subtitle {
+  font-family: 'Poppins','Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #f5f5f5;
+  margin-bottom: 2.8rem;
+  max-width: 750px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.3px;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(2px);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-button {
+  text-decoration: none;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #FFD700;
+  color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

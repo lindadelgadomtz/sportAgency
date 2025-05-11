@@ -1,0 +1,49 @@
+.logo-carousel {
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 120px; /* or whatever fixed height you want */
+  }
+  
+  .logo-track {
+    display: flex;
+    width: max-content;
+    animation: scrollLeft linear infinite;
+  }
+  
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .logo-slide {
+    width: 220px;         /* Fixed size to standardize spacing */
+    height: 1%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;  /* 👈 Vertical centering */
+    justify-content: center; /* 👈 Horizontal centering */
+    flex-shrink: 0;
+    box-sizing: border-box;
+    max-height: 237px;
+  }
+  
+  .logo-slide img {
+    max-height: 100%;
+    max-width: 100%;
+    padding: 40px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(80%);
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-slide img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%) brightness(100%);
+  }
+  

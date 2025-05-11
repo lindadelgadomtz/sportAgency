@@ -1,0 +1,98 @@
+
+/* Header Styles */
+.header-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .header-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  
+  .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 30%, #000 90%);
+    z-index: 2;
+  }
+  
+  .header-content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+  
+  .header-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+  }
+  
+  .header-subtitle {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    max-width: 800px;
+    margin-bottom: 2.5rem;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+  }
+  
+  .header-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .header-button {
+    text-decoration: none;
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .header-button:hover {
+    background-color: #007BFF;
+    border-color: #007BFF;
+    color: #fff;
+  }
+  
+  /* Responsive Typography */
+  @media (max-width: 768px) {
+    .header-title {
+      font-size: 2.5rem;
+    }
+  
+    .header-subtitle {
+      font-size: 1.1rem;
+    }
+  }
+  

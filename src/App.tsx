@@ -1,6 +1,22 @@
 import React from 'react';
 import './App.css';
 import { GalleryWithInfo } from './components/galleryWithInfo/GalleryWithInfo';
+import Header from './components/header/Header';
+import HeroSection from './components/heroSection/HeroSection';
+import LogoCarousel from './components/logoCarousel/LogoCarousel';
+
+const logos = [
+  '/logos/andros.png',
+  '/logos/canterbury.png',
+  '/logos/edf.png',
+  '/logos/mcdonalds.png',
+  '/logos/nintendo.png',
+  '/logos/orange.png',
+  '/logos/parionsSport.png',
+  '/logos/nike.png',
+  '/logos/tcl.png',
+];
+
 
 function App() {
   const galleryImages = [
@@ -16,24 +32,21 @@ function App() {
       eyebrow: "VALEURS",
       title: "L'esprit de compétition",
       description: "Chez Papy Sponso soutient les passionnés de sport amateur avec énergie et engagement.",
-      buttonText: "Découvrir",
-      buttonLink: "#valeurs"
+      showButton: "false"
     },
     {
       imageUrl: galleryImages[1],
       eyebrow: "COMMUNAUTÉ",
       title: "Une vraie équipe",
       description: "Un réseau de sportifs et sponsors unis autour de projets dynamiques.",
-      buttonText: "Rejoindre",
-      buttonLink: "#communaute"
+      showButton: "false"
     },
     {
       imageUrl: galleryImages[2],
       eyebrow: "SOUTIEN",
       title: "Des partenaires engagés",
       description: "Nous connectons des marques ambitieuses avec des athlètes prometteurs.",
-      buttonText: "Nos partenaires",
-      buttonLink: "#partenaires"
+      showButton: "false"
     },
 
 
@@ -41,6 +54,8 @@ function App() {
 
   return (
     <div className="App">
+      <HeroSection  bgImage='./images/heroSection.webp'/>
+      <LogoCarousel logos={logos} speed={65} height="100%" />
       <GalleryWithInfo
         gallery={galleryImages}
         items={contentItems}
