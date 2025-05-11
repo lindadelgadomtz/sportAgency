@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import FontFaceObserver from 'fontfaceobserver';
 import './HeroSection.css';
 
 interface HeroSectionProps {
@@ -6,24 +7,35 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ bgImage }) => {
+  const [fontLoaded, setFontLoaded] = useState(false);
+
+  useEffect(() => {
+    const rubik = new FontFaceObserver('Rubik Dirt');
+    rubik.load().then(() => setFontLoaded(true));
+  }, []);
+
   return (
-<section
-  className="hero-section"
-  style={{ backgroundImage: `url(${bgImage})` }}
->
-  <div className="hero-overlay">
-    <div className="hero-content">
-      <h1 className="hero-title"> TRANSFORMEZ VOTRE PERFORMANCE EN VISIBILITÉ</h1>
-      <p className="hero-subtitle">
-        Écrivons ensemble LA plus belle des histoires.
-      </p>
-      {/* <div className="hero-buttons">
-        <a href="#discover" className="hero-button">Découvrir</a>
-        <a href="#contact" className="hero-button">Prendre contact</a>
-      </div> */}
-    </div>
-  </div> 
-</section>
+    <section
+      aria-label="Hero section"
+      className="hero-section"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      <div className="hero-overlay">
+        <div className="hero-content">
+          {/* Only render title after font loads */}
+          {fontLoaded && (
+            <>
+              <h1 className="hero-title">
+                TRANSFORMEZ VOTRE PERFORMANCE EN VISIBILITÉ
+              </h1>
+              <p className="hero-subtitle">
+                Écrivons ensemble LA plus belle des histoires.
+              </p>
+            </>
+          )}
+        </div>
+      </div>
+    </section>
   );
 };
 
