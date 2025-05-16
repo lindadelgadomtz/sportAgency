@@ -4,6 +4,8 @@ import { GalleryWithInfo } from './components/galleryWithInfo/GalleryWithInfo';
 import HeroSection from './components/heroSection/HeroSection';
 import LogoCarousel from './components/logoCarousel/LogoCarousel';
 import HeaderBurger from './components/headerBurger/HeaderBurger';
+import DiagonalComponent from './components/diagonalComponent/DiagonalComponent';
+
 
 const logos = [
   '/logos/andros.png',
@@ -62,7 +64,7 @@ function App() {
         ]}
         languages={['fr', 'en']}
       />
-      <HeroSection  bgImage='./images/heroSection.webp'/>
+      <HeroSection bgImage='./images/heroSection.webp' />
       <LogoCarousel logos={logos} speed={65} height="100%" />
       <GalleryWithInfo
         gallery={galleryImages}
@@ -72,7 +74,13 @@ function App() {
         buttonColor="#FFD700"
         hoverEffect={true}
       />
-       <main>
+      <DiagonalComponent
+        imageUrl='./images/heroSection.webp'
+        phrase="Push Beyond the Limits"
+        theme="dark"
+        height="60vh"
+      />
+      <main>
         <section id="presentation">...</section>
         <section id="sportifs">...</section>
         <section id="influenceurs">...</section>
