@@ -5,6 +5,8 @@ import HeroSection from './components/heroSection/HeroSection';
 import LogoCarousel from './components/logoCarousel/LogoCarousel';
 import HeaderBurger from './components/headerBurger/HeaderBurger';
 import DiagonalComponent from './components/diagonalComponent/DiagonalComponent';
+import FlyingText from './components/flyingText/FlyingText';
+import FlyingTextVideo from './components/flyingTextVideo/FlyingTextVideo'
 
 
 const logos = [
@@ -74,12 +76,37 @@ function App() {
         buttonColor="#FFD700"
         hoverEffect={true}
       />
-      <DiagonalComponent
+      {/* <DiagonalComponent
         imageUrl='./images/heroSection.webp'
         phrase="Push Beyond the Limits"
         theme="dark"
         height="60vh"
+      /> */}
+
+      <FlyingText
+        title="Des partenariats uniques et performants"
+        description="Chez Papy Sponso, nous créons des liens uniques et puissants entre ambassadeurs et marques. Nous transformons chaque partenariat en une opportunité de succès inégalé."
+        imageUrl='./images/heroSection.webp'
+        backgroundColor="#000000"
+        textColor="#ffffff"
+        titleColor="#FFCC00"
+        showButton={true}
+        buttonText="Découvrez plus"
+        onButtonClick={() => alert('Bouton cliqué !')} />
+
+      <FlyingTextVideo
+        title="Regardez notre histoire"
+        description="Chez Papy Sponso, nous créons des liens puissants entre ambassadeurs et marques. Regardez comment."
+        imageUrl="/images/video-cover.jpg"
+        videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        backgroundColor="#000000"
+        textColor="#ffffff"
+        titleColor="#FFCC00"
+        showButton
+        buttonText="En savoir plus"
+        onButtonClick={() => alert("CTA clicked")}
       />
+
       <main>
         <section id="presentation">...</section>
         <section id="sportifs">...</section>

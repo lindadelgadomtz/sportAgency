@@ -1,0 +1,199 @@
+.blockWrapper {
+    width: 100%;
+    background-color: #000;
+    font-family: 'Poppins', sans-serif;
+    padding: 6rem 2rem 4rem; /* extra top padding to avoid overlap */
+    position: relative;
+  }
+  
+  .gridLayout {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    max-width: 1240px;
+    margin: 0 auto;
+    gap: 3rem;
+  }
+  
+  .leftSide {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: inherit;
+    text-align: left;
+  }
+  
+  .button {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    align-self: center;
+  }
+  
+  .button:hover {
+    opacity: 0.85;
+  }
+  
+  .rightSide {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    z-index: 10;
+    padding: 0 1rem;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* ✅ subtle dark outline */
+
+  }
+  
+  .imageWrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: grayscale(5%) contrast(105%);
+  }
+  
+  .imageWrapper:hover .image {
+    transform: scale(1.03);
+    filter: brightness(1.1) contrast(110%);
+  }
+  
+  .playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .playButton::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 16px solid #000;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+  
+  .imageWrapper:hover .playButton {
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  .videoWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .videoFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 920px) {
+    .gridLayout {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .title {
+      position: static;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  
+    .image {
+      max-width: 80%;
+    }
+  
+    .leftSide {
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .textContent {
+      align-items: center;
+    }
+  
+    .description {
+      text-align: center;
+    }
+  
+    .button {
+      align-self: center;
+    }
+  }
+  
+  *::before,
+*::after {
+  box-sizing: border-box;
+}
