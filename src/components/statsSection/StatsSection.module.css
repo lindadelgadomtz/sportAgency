@@ -1,0 +1,124 @@
+/* StatsSection.module.css */
+.statsSection {
+  width: 100%;
+  padding: 4rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s;
+}
+
+.statsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.statBlock {
+  flex: 1 1 200px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.statBlock:hover .label,
+.statBlock:hover .count {
+  transform: scale(1.1);
+}
+
+
+
+.label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(83%) sepia(27%) saturate(2315%) hue-rotate(1deg) brightness(100%) contrast(95%); /* yellow #FFCC00 */
+}
+
+.label a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.label a:hover {
+  text-decoration: underline;
+}
+
+.count {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--highlight);
+  transition: transform 0.3s ease;
+}
+
+.title {
+  text-align: center;
+  color: var(--highlight);
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem;
+  transform: rotate(-90deg);
+}
+
+.bg {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 3;
+}
+
+.progress {
+  fill: none;
+  stroke:  #FFCC00; /* Yellow */;
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.6s ease;
+}
+
+/* Theming */
+.light {
+  --highlight: #000;
+  background: #fff;
+  color: #000;
+}
+
+.dark {
+  --highlight: #999999;
+  background: #000;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .statsGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .count {
+    font-size: 1.6rem;
+  }
+}
+
