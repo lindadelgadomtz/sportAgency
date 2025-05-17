@@ -6,7 +6,9 @@ import LogoCarousel from './components/logoCarousel/LogoCarousel';
 import HeaderBurger from './components/headerBurger/HeaderBurger';
 import DiagonalComponent from './components/diagonalComponent/DiagonalComponent';
 import FlyingText from './components/flyingText/FlyingText';
-import FlyingTextVideo from './components/flyingTextVideo/FlyingTextVideo'
+import FlyingTextVideo from './components/flyingTextVideo/FlyingTextVideo';
+import StatsSection from './components/statsSection/StatsSection';
+import StatsPercentageSection from './components/statsSection/StatsPercentageSection';
 
 
 const logos = [
@@ -21,6 +23,23 @@ const logos = [
   '/logos/tcl.png',
 ];
 
+const statsData = [
+  { label: "Athletes", count: 16170, link: "/athlete", icon: '/icons/running.png' },
+  { label: "Teams & Clubs", count: 13103, link: "/clubs", icon: '/icons/group.png' },
+  { label: "Associations", count: 1093, link: "/associations", icon: '/icons/users-linked.png' },
+  { label: "Sponsors", count: 5672, link: "/sponsor", icon: '/icons/sponsor.png' },
+  //{ label: "Football", count: 6100, percentage: 75, link: "/sports/football-soccer" },
+  //{ label: "Motor Sports", count: 2700, percentage: 45, link: "/sports/motor-sports" },
+  //{ label: "eSports", count: 1500, percentage: 30, link: "/sports/esports" },
+  //{ label: "Other", count: 21500, percentage: 95, link: "/sports/other" }
+];
+
+const statsPercentageData = [
+  { label: "Football", count: 6100, percentage: 75, link: "/sports/football-soccer" },
+  { label: "Motor Sports", count: 2700, percentage: 45, link: "/sports/motor-sports" },
+  { label: "eSports", count: 1500, percentage: 30, link: "/sports/esports" },
+  { label: "Other", count: 21500, percentage: 95, link: "/sports/other" }
+];
 
 function App() {
   const galleryImages = [
@@ -76,12 +95,12 @@ function App() {
         buttonColor="#FFD700"
         hoverEffect={true}
       />
-      {/* <DiagonalComponent
-        imageUrl='./images/heroSection.webp'
-        phrase="Push Beyond the Limits"
-        theme="dark"
-        height="60vh"
-      /> */}
+
+      <StatsSection
+        title="Nos chiffres clés"
+        stats={statsData}
+        theme="dark" // or "light"
+      />
 
       <FlyingText
         title="Des partenariats uniques et performants"
@@ -89,10 +108,25 @@ function App() {
         imageUrl='./images/heroSection.webp'
         backgroundColor="#000000"
         textColor="#ffffff"
-        titleColor="#FFCC00"
+        titleColor="#999999"
         showButton={true}
         buttonText="Découvrez plus"
         onButtonClick={() => alert('Bouton cliqué !')} />
+
+      <StatsPercentageSection
+        title="Répartition par sport"
+        stats={statsPercentageData}
+        theme="dark"
+      />
+
+      {/* <DiagonalComponent
+        imageUrl='./images/heroSection.webp'
+        phrase="Push Beyond the Limits"
+        theme="dark"
+        height="60vh"
+      /> */}
+
+
 
       <FlyingTextVideo
         title="Regardez notre histoire"
@@ -101,11 +135,13 @@ function App() {
         videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
         backgroundColor="#000000"
         textColor="#ffffff"
-        titleColor="#FFCC00"
+        titleColor="#999999"
         showButton
         buttonText="En savoir plus"
         onButtonClick={() => alert("CTA clicked")}
       />
+
+
 
       <main>
         <section id="presentation">...</section>
