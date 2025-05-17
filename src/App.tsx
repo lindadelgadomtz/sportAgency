@@ -10,6 +10,7 @@ import FlyingTextVideo from './components/flyingTextVideo/FlyingTextVideo';
 import StatsSection from './components/statsSection/StatsSection';
 import StatsPercentageSection from './components/statsSection/StatsPercentageSection';
 import SportifGrid from './components/sportifGrid/SportifGrid';
+import Footer from './components/footer/Footer'
 
 
 const logos = [
@@ -169,6 +170,20 @@ function App() {
 
 
       <SportifGrid title="Nos Sportifs" sportifs={sportifs} theme="dark" />
+
+      <Footer
+  companyName="CHEZ PAPY SPONSO"
+  links={[
+    { label: 'Mentions légales', href: '/legal' },
+    { label: 'Politique de confidentialité', href: '/privacy' },
+    { label: 'Cookies', href: '/cookies' },
+  ]}
+  social={{
+    instagram: 'https://instagram.com/',
+    linkedin: 'https://linkedin.com/',
+    twitter: 'https://twitter.com/',
+  }}
+/>
       {/* <main>
         <section id="presentation">...</section>
         <section id="sportifs">...</section>
