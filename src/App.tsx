@@ -9,6 +9,7 @@ import FlyingText from './components/flyingText/FlyingText';
 import FlyingTextVideo from './components/flyingTextVideo/FlyingTextVideo';
 import StatsSection from './components/statsSection/StatsSection';
 import StatsPercentageSection from './components/statsSection/StatsPercentageSection';
+import SportifGrid from './components/sportifGrid/SportifGrid';
 
 
 const logos = [
@@ -39,6 +40,31 @@ const statsPercentageData = [
   { label: "Motor Sports", count: 2700, percentage: 45, link: "/sports/motor-sports" },
   { label: "eSports", count: 1500, percentage: 30, link: "/sports/esports" },
   { label: "Other", count: 21500, percentage: 95, link: "/sports/other" }
+];
+
+const sportifs = [
+  {
+    name: 'Camille Dubois',
+    sport: 'Natation synchronisée',
+    image: '/images/cpsFour.webp',
+    showButton: true,
+    onClick: () => alert('Voir plus sur Camille'),
+  },
+  {
+    name: 'Léo Martin',
+    sport: 'Basketball',
+    image: '/images/cpsTwo.webp',
+    showButton: true,
+    onClick: () => alert('Voir plus sur Léo'),
+  },
+  {
+    name: 'Thomas Ramos',
+    sport: 'Rugby',
+    image: '/images/cpsFive.webp',
+    showButton: true,
+    onClick: () => alert('Voir plus sur Léo'),
+
+  },
 ];
 
 function App() {
@@ -142,14 +168,14 @@ function App() {
       />
 
 
-
-      <main>
+      <SportifGrid title="Nos Sportifs" sportifs={sportifs} theme="dark" />
+      {/* <main>
         <section id="presentation">...</section>
         <section id="sportifs">...</section>
         <section id="influenceurs">...</section>
         <section id="collabs">...</section>
         <section id="contact">...</section>
-      </main>
+      </main> */}
     </div>
   );
 }
