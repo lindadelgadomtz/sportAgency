@@ -13,6 +13,7 @@ import SportifGrid from './components/sportifGrid/SportifGrid';
 import Footer from './components/footer/Footer';
 import CenteredPicturePhraseText from './components/centeredPicturePhraseText/CenteredPicturePhraseText';
 import BigTitleTwoColumns from './components/bigTitleTwoColumns/BigTitleTwoColumns';
+import ThreePicturesTitle from './components/threePicturesTitle/ThreePicturesTitle';
 
 
 const logos = [
@@ -195,6 +196,17 @@ function App() {
   onButtonClick={() => alert('Clique sur le bouton !')}
   theme="dark"          // or "light"
   showButton={true}     // or false
+/>
+
+<ThreePicturesTitle
+  mainImage="/images/cpsSix.webp"
+  topTitle="ATHLETES"
+  bottomTitle="Ensemble, vers la victoire"
+  sideImageOne="/images/cpsEight.webp"
+  sideImageTwo="/images/cpsTwo.webp"
+  imageOnLeft={true}
+  titleAboveImages={true}
+  theme="dark"
 />
 
       <Footer
