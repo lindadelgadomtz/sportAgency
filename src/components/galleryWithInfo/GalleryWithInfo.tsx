@@ -3,7 +3,7 @@ import styles from "./GalleryWithInfo.module.css";
 import useInView from "../../utils/UseInView";
 
 export interface GalleryItem {
-  imageUrl: string;
+  imageUrl?: string;
   eyebrow: string;
   title: string;
   description: string;

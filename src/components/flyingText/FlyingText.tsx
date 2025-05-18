@@ -8,6 +8,7 @@ interface FlyingTextProps {
     backgroundColor?: string;
     textColor?: string;
     titleColor?: string;
+    buttonColor?:string;
     showButton?: boolean;
     buttonText?: string;
     onButtonClick?: () => void;
@@ -20,6 +21,7 @@ const FlyingText: React.FC<FlyingTextProps> = ({
     backgroundColor = "#000000",
     textColor = "#ffffff",
     titleColor = "#FFCC00",
+    buttonColor ="FFD700",
     showButton = false,
     buttonText = "En savoir plus",
     onButtonClick,
@@ -34,7 +36,7 @@ const FlyingText: React.FC<FlyingTextProps> = ({
                             <button
                                 className={styles.button}
                                 style={{
-                                    backgroundColor: titleColor,
+                                    backgroundColor: buttonColor,
                                     color: backgroundColor,
                                 }}
                                 onClick={onButtonClick}

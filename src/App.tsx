@@ -89,6 +89,7 @@ function App() {
       description: "Un réseau de sportifs et sponsors unis autour de projets dynamiques.",
       showButton: "false"
     },
+    
     {
       imageUrl: galleryImages[2],
       eyebrow: "SOUTIEN",
@@ -136,6 +137,7 @@ function App() {
         backgroundColor="#000000"
         textColor="#ffffff"
         titleColor="#999999"
+        buttonColor='#FFD700'
         showButton={true}
         buttonText="Découvrez plus"
         onButtonClick={() => alert('Bouton cliqué !')} />
@@ -163,6 +165,7 @@ function App() {
         backgroundColor="#000000"
         textColor="#ffffff"
         titleColor="#999999"
+        buttonColor='#FFD700'
         showButton
         buttonText="En savoir plus"
         onButtonClick={() => alert("CTA clicked")}
