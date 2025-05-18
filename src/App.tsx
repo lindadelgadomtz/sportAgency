@@ -10,7 +10,8 @@ import FlyingTextVideo from './components/flyingTextVideo/FlyingTextVideo';
 import StatsSection from './components/statsSection/StatsSection';
 import StatsPercentageSection from './components/statsSection/StatsPercentageSection';
 import SportifGrid from './components/sportifGrid/SportifGrid';
-import Footer from './components/footer/Footer'
+import Footer from './components/footer/Footer';
+import CenteredPicturePhraseText from './components/centeredPicturePhraseText/CenteredPicturePhraseText';
 
 
 const logos = [
@@ -173,6 +174,16 @@ function App() {
 
 
       <SportifGrid title="Nos Sportifs" sportifs={sportifs} theme="dark" />
+
+      <CenteredPicturePhraseText
+  imageUrl="/images/cpsFive.webp"
+  imageHeight="800px"
+  imageWidth="480px"
+  phrase="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  details="Thomas Ramos, A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  buttonText="Nous contacter"
+  onButtonClick={() => alert('Profil de Thomas Ramos')}
+/>
 
       <Footer
   companyName="CHEZ PAPY SPONSO"
