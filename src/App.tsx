@@ -12,6 +12,7 @@ import StatsPercentageSection from './components/statsSection/StatsPercentageSec
 import SportifGrid from './components/sportifGrid/SportifGrid';
 import Footer from './components/footer/Footer';
 import CenteredPicturePhraseText from './components/centeredPicturePhraseText/CenteredPicturePhraseText';
+import BigTitleTwoColumns from './components/bigTitleTwoColumns/BigTitleTwoColumns';
 
 
 const logos = [
@@ -183,6 +184,17 @@ function App() {
   details="Thomas Ramos, A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   buttonText="Nous contacter"
   onButtonClick={() => alert('Profil de Thomas Ramos')}
+/>
+
+<BigTitleTwoColumns
+  eyebrow="NOTRE VISION"
+  title="Construire des ponts entre les marques et les sportifs"
+  leftText="Chez Papy Sponso, nous croyons que chaque athlète mérite d’être soutenu. Nous nous engageons à créer des connexions authentiques et durables entre les talents du sport amateur et les marques engagées. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  rightText="Notre objectif est de valoriser les efforts, les parcours et les passions. Grâce à notre plateforme, nous facilitons des collaborations où chacun trouve une voix, une visibilité, et un avenir plus prometteur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  buttonText="Rejoignez-nous"
+  onButtonClick={() => alert('Clique sur le bouton !')}
+  theme="dark"          // or "light"
+  showButton={true}     // or false
 />
 
       <Footer

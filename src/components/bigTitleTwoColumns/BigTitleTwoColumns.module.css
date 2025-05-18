@@ -1,0 +1,96 @@
+.wrapper {
+    font-family: 'Poppins', sans-serif;
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dark {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .light {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .container {
+    max-width: 1240px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .eyebrow {
+    color: #999999;
+    font-size: 0.85rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  
+  .title {
+    color: #FFD700;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    margin-top: -0.8rem;
+  }
+  
+  .columns {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    text-align: justify;
+  }
+  
+  .columnText {
+    flex: 1;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+  
+  .button {
+    background-color: #FFD700;
+    color: #000;
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .button:hover {
+    opacity: 0.85;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .columns {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate {
+    animation: fadeInUp 1s ease-out forwards;
+  }
